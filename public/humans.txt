@@ -1,0 +1,12 @@
+\\      /* ABOUT */
+ (o>    Just a guy trying to get by.
+ /)_)   Built by Me.
+/)_(
+|___|   /* TEAM */
+        Author: Joseph Y.
+        Contact: feedback@dram.space
+
+        /* SITE */
+        Last update: 2026/04/09
+        Powered by your favorite frameworks of yesteryear.
+        Software: VS Code, Firefox (long live Mozilla)
