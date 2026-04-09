@@ -5,6 +5,7 @@
 |___|   /* TEAM */
         Author: Joseph Y.
         Contact: feedback@dram.space
+        Actively seeking employment or volunteer opportunities.
 
         /* SITE */
         Last update: 2026/04/09
