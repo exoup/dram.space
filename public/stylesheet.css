@@ -230,22 +230,6 @@
             }
         }
 
-        @keyframes animOutline {
-            from {
-                stroke-dashoffset: 10;
-            }
-
-            to {
-                stroke-dashoffset: -10;
-            }
-        }
-
-        .tail {
-            stroke-dasharray: 10 10;
-            animation:
-                animOutline 1s linear infinite;
-        }
-
         @media (prefers-reduced-motion: reduce) {
 
             *,

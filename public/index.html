@@ -44,6 +44,8 @@
                             stroke-width: 2.8;
                             stroke-linecap: round;
                             stroke-linejoin: round;
+
+                            transition: stroke-dashoffset 3000ms;
                         }
 
                         .df {
@@ -59,26 +61,60 @@
                             filter: drop-shadow(0 0 0.5rem var(--hero-accent-glow));
                         }
 
+                        .dn:hover~.anim {
+                            stroke-dashoffset: 0;
+                        }
+
                         .dt {
                             font-family: var(--font);
                             fill: var(--hero-accent);
                             font-style: italic;
                             font-weight: 300;
                         }
+
+                        @keyframes animOutline {
+                            from {
+                                stroke-dashoffset: 10;
+                            }
+
+                            to {
+                                stroke-dashoffset: -10;
+                            }
+                        }
+
+                        .t {
+                            stroke-dasharray: 10 10;
+                            animation:
+                                animOutline 1s linear infinite;
+                        }
+
+                        .anim {
+                            stroke: var(--hero-accent);
+                            stroke-dasharray: 100, 10000;
+                            stroke-dashoffset: 100px;
+                        }
                     </style>
                 </defs>
 
                 <ellipse class="d" cx="210" cy="163" rx="130" ry="37" />
+                <ellipse class="d anim" cx="210" cy="163" rx="130" ry="37" />
 
                 <ellipse class="d" cx="334" cy="110" rx="43" ry="37" />
+                <ellipse class="d anim" cx="334" cy="110" rx="43" ry="37" />
 
                 <ellipse class="d" cx="397" cy="126" rx="30" ry="15" />
 
                 <ellipse class="df dn" cx="423" cy="119" rx="6.5" ry="5.5" />
+                <ellipse class="df dn anim" cx="423" cy="119" rx="6.5" ry="5.5" />
 
                 <circle class="df" cx="350" cy="102" r="5" />
 
                 <path class="d" d="M 318 83
+                            C 306 75,294 77,285 92
+                            C 273 108,275 138,286 156
+                            C 295 172,306 173,318 160
+                            C 332 146,323 114,326 88" />
+                <path pathLength="100" class="d anim" d="M 318 83
                             C 306 75,294 77,285 92
                             C 273 108,275 138,286 156
                             C 295 172,306 173,318 160
@@ -94,13 +130,19 @@
                 <path class="d" d="M 120 195 L 119 231
                             Q 116 238,124 238 Q 133 238,122 231 L 131 195" />
 
-                <path class="d tail" d="M 80 156
+
+                <path class="d t" d="M 80 156
                             C 58 129,47 102,56 78
                             C 62 61,79 57,88 70
                             C 93 80,88 96,90 107" />
 
-                <text class="dt" x="250" y="259" text-anchor="middle" font-size="18" letter-spacing="6">let's
-                    dram</text>
+                <path pathLength="100" class="d anim" d="M 80 156
+                            C 58 129,47 102,56 78
+                            C 62 61,79 57,88 70
+                            C 93 80,88 96,90 107" />
+
+                <text style="user-select: none;" class="dt" x="250" y="259" text-anchor="middle" font-size="18"
+                    letter-spacing="6">let's dram</text>
             </svg>
 
         </div>
